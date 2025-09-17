@@ -1,0 +1,143 @@
+.camera-feed {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.camera-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.camera-canvas {
+  width: 100%;
+  height: 480px;
+  border-radius: 8px;
+  background-color: #000;
+  display: block;
+}
+
+.camera-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar overlay solo cuando no hay manos detectadas */
+.camera-container:hover .camera-overlay,
+.camera-overlay:has(.no-hands) {
+  opacity: 1;
+}
+
+.hand-guide {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px 25px;
+  border-radius: 8px;
+  border: 2px dashed #3498db;
+  text-align: center;
+}
+
+.hand-guide p {
+  margin: 5px 0;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.no-hands {
+  color: #e74c3c !important;
+}
+
+.hands-detected {
+  color: #27ae60 !important;
+}
+
+.camera-status {
+  text-align: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.training-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.start-training-btn, .stop-training-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-training-btn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.start-training-btn:hover {
+  background-color: #219a52;
+}
+
+.stop-training-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.stop-training-btn:hover {
+  background-color: #c0392b;
+}
+
+.capture-info {
+  text-align: center;
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.capture-info p {
+  margin: 5px 0;
+  color: #2c3e50;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.retry-btn {
+  background-color: #c62828;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.error-text {
+  color: #c62828 !important;
+  font-weight: bold;
+}

@@ -1,0 +1,55 @@
+.recent-sessions {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.recent-sessions h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.no-sessions {
+  color: #7f8c8d;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.sessions-list {
+  margin-top: 15px;
+}
+
+.session-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.session-item:last-child {
+  border-bottom: none;
+}
+
+.session-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.session-info strong {
+  color: #2c3e50;
+}
+
+.session-info span {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.session-time {
+  color: #3498db;
+  font-weight: 500;
+}
